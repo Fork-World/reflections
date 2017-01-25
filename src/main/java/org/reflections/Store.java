@@ -43,8 +43,7 @@ public class Store {
     Multimap<String, String> mmap = storeMap.get(index);
     if (mmap == null) {
       Multimap<String, String> multimap =
-              Multimaps.newSetMultimap(new HashMap<String, Collection<String>>(),
-                      HashSet::new);
+          Multimaps.newSetMultimap(new HashMap<String, Collection<String>>(), HashSet::new);
       mmap = concurrent ? Multimaps.synchronizedSetMultimap(multimap) : multimap;
       storeMap.put(index, mmap);
     }

@@ -88,7 +88,8 @@ public class MultimapImpl<KEY, VALUES> implements Multimap<KEY, VALUES> {
 
   @Override
   public Collection<VALUES> get(final KEY key) {
-    return multimap.get(key) != null ? multimap.get(key) : createCollection(key);
+    return multimap.getOrDefault(key, Collections.EMPTY_LIST);
+    //return multimap.get(key) != null ? multimap.get(key) : createCollection(key);
 
   }
 

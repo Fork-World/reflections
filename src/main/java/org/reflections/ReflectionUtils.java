@@ -480,7 +480,10 @@ public abstract class ReflectionUtils {
         Stream.of(elements).collect(Collectors.toSet())
         :
         StreamSupport
-            .stream(Arrays.asList(elements).stream().filter(Predicates.and(predicates)::apply).collect(Collectors.toList()).spliterator(), false)
+            .stream(Arrays.stream(elements)
+                .filter(Predicates.and(predicates)::apply)
+                .collect(Collectors.toList())
+                .spliterator(), false)
             .collect(Collectors.toSet());
   }
 
@@ -489,7 +492,9 @@ public abstract class ReflectionUtils {
         StreamSupport
             .stream(elements.spliterator(), false).collect(Collectors.toSet()) :
         StreamSupport
-            .stream(StreamSupport.stream(elements.spliterator(), false).filter(Predicates.and(predicates)::apply).collect(Collectors.toList()).spliterator(), false)
+            .stream(StreamSupport.stream(elements.spliterator(), false)
+                                 .filter(Predicates.and(predicates)::apply)
+                                 .collect(Collectors.toList()).spliterator(), false)
             .collect(Collectors.toSet());
   }
 }
