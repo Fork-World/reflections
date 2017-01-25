@@ -1,3 +1,8 @@
+# This Fork
+This fork is without the dependency to the guava libs from google.
+In my projects I try to minimize the amount of dependencies.
+In this case, I had to make sure, that this lib is Guava free!
+
 ##Java runtime metadata analysis, in the spirit of [Scannotations](http://bill.burkecentral.com/2008/01/14/scanning-java-annotations-at-runtime/)
 
 Reflections scans your classpath, indexes the metadata, allows you to query it on runtime and may save and collect that information for many modules within your project.
@@ -8,15 +13,13 @@ Using Reflections you can query your metadata such as:
   * get all resources matching a regular expression
   * get all methods with specific signature including parameters, parameter annotations and return type
 
-[![Build Status](https://travis-ci.org/ronmamo/reflections.svg?branch=master)](https://travis-ci.org/ronmamo/reflections)
-
 ###Intro
 Add Reflections to your project. for maven projects just add this dependency:
 ```xml
 <dependency>
     <groupId>org.reflections</groupId>
     <artifactId>reflections</artifactId>
-    <version>0.9.10</version>
+    <version>1.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -97,8 +100,6 @@ Set<Member> usages =
   * Classloader can also be configured, which will be used for resolving runtime classes from names.
   * Make sure to scan all the transitive relevant urls (your packages and relevant 3rd party).
 
-*Browse the [javadoc](http://reflections.googlecode.com/svn/trunk/reflections/javadoc/apidocs/index.html?org/reflections/Reflections.html) for more info.* 
-*Also, browse the [tests directory](https://github.com/ronmamo/reflections/tree/master/src/test/java/org/reflections) to see some more examples.*
 
 ###ReflectionUtils
 ReflectionsUtils contains some convenient Java reflection helper methods for getting types/constructors/methods/fields/annotations matching some predicates, generally in the form of *getAllXXX(type, withYYY)
@@ -142,7 +143,6 @@ Reflections can also:
   * save your model entities metadata as .java file, so you can reference types/fields/methods/annotation in a static manner
   * initial [Spring component scan](https://code.google.com/p/reflections/wiki/ReflectionsSpring)
 
-*See the [UseCases](http://code.google.com/p/reflections/wiki/UseCases) wiki page*
 
 ###Contribute
 Pull requests are welcomed!!
@@ -151,7 +151,5 @@ The license is [WTFPL](http://www.wtfpl.net/), just do what the fuck you want to
 
 This library is published as an act of giving and generosity, from developers to developers. 
 
-Please feel free to use it, and to contribute to the developers community in the same manner. [Dāna](http://en.wikipedia.org/wiki/D%C4%81na)
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WLN75KYSR6HAY) 
-
+Please feel free to use it, and to contribute to the developers community in the same manner. 
 _Cheers_
