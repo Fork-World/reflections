@@ -54,7 +54,7 @@ import java.util.stream.StreamSupport;
 public abstract class ReflectionUtils {
 
   /**
-   * would include {@code Object.class} when {@link #getAllSuperTypes(Class, com.google.common.base.Predicate<T>[])}. default is false.
+   * would include {@code Object.class} when {getAllSuperTypes(Class, com.google.common.base.Predicate<T>[])}. default is false.
    */
   public static boolean includeObject = false;
   //
@@ -82,11 +82,15 @@ public abstract class ReflectionUtils {
    */
   public static Set<Class<?>> getSuperTypes(Class<?> type) {
     Set<Class<?>> result = new LinkedHashSet<>();
-    Class<?> superclass = type.getSuperclass();
-    Class<?>[] interfaces = type.getInterfaces();
-    if (superclass != null && (includeObject || !superclass.equals(Object.class))) result.add(superclass);
-    if (interfaces != null && interfaces.length > 0) result.addAll(Arrays.asList(interfaces));
-    return result;
+
+    if (type == null) return result;
+    else {
+      Class<?> superclass = type.getSuperclass();
+      Class<?>[] interfaces = type.getInterfaces();
+      if (superclass != null && (includeObject || !superclass.equals(Object.class))) result.add(superclass);
+      if (interfaces != null && interfaces.length > 0) result.addAll(Arrays.asList(interfaces));
+      return result;
+    }
   }
 
   /**
@@ -493,8 +497,8 @@ public abstract class ReflectionUtils {
             .stream(elements.spliterator(), false).collect(Collectors.toSet()) :
         StreamSupport
             .stream(StreamSupport.stream(elements.spliterator(), false)
-                                 .filter(Predicates.and(predicates)::apply)
-                                 .collect(Collectors.toList()).spliterator(), false)
+                .filter(Predicates.and(predicates)::apply)
+                .collect(Collectors.toList()).spliterator(), false)
             .collect(Collectors.toSet());
   }
 }
