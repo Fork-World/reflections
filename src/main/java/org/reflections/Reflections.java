@@ -211,6 +211,7 @@ public class Reflections {
     final Reflections reflections = new Reflections();
     Iterable<Vfs.File> files = Vfs.findFiles(urls, packagePrefix, resourceNameFilter);
     for (final Vfs.File file : files) {
+      log.info("scanning VFS file : " + file.getRelativePath() + "/" + file.getName());
       InputStream inputStream = null;
       try {
         inputStream = file.openInputStream();
