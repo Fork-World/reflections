@@ -10,7 +10,7 @@
 
 
   <artifactId>rapidpm-reflections</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>${packaging.type}</packaging>
 
   <name>RapidPM - Reflections</name>
