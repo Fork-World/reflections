@@ -1,9 +1,9 @@
 package org.reflections.serializers;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
-import com.google.common.io.Files;
+import repacked.com.google.common.base.Joiner;
+import repacked.com.google.common.collect.Multimap;
+import repacked.com.google.common.collect.Multimaps;
+import repacked.com.google.common.io.Files;
 import org.reflections.ReflectionUtils;
 import org.reflections.Reflections;
 import org.reflections.ReflectionsException;

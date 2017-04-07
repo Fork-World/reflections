@@ -1,4 +1,4 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
 import java.util.Objects;
 import java.util.stream.Collectors;

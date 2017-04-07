@@ -1,8 +1,8 @@
 package org.reflections.serializers;
 
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
-import com.google.common.io.Files;
+import repacked.com.google.common.collect.Multimap;
+import repacked.com.google.common.collect.Multimaps;
+import repacked.com.google.common.io.Files;
 import com.google.gson.*;
 import org.reflections.Reflections;
 import org.reflections.util.Utils;

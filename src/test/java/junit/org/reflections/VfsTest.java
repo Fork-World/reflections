@@ -1,7 +1,7 @@
 package junit.org.reflections;
 
-import com.google.common.base.Predicates;
-import com.google.common.collect.Iterables;
+import repacked.com.google.common.base.Predicates;
+import repacked.com.google.common.collect.Iterables;
 import javassist.bytecode.ClassFile;
 import org.junit.Ignore;
 import org.junit.Test;

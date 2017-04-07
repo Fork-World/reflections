@@ -1,6 +1,6 @@
 package org.reflections.adapters;
 
-import com.google.common.base.Joiner;
+import repacked.com.google.common.base.Joiner;
 import org.reflections.util.Utils;
 import org.reflections.vfs.Vfs;
 

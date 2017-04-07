@@ -1,8 +1,8 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
+import repacked.com.google.common.base.Function;
+import repacked.com.google.common.base.Predicate;
 
 import java.util.Collection;
 import java.util.Iterator;

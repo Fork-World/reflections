@@ -1,4 +1,4 @@
-package com.google.common.base;
+package repacked.com.google.common.base;
 
 import java.io.IOException;
 import java.util.Iterator;

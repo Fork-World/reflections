@@ -1,4 +1,4 @@
-package com.google.common.io;
+package repacked.com.google.common.io;
 
 import java.io.File;
 import java.io.FileOutputStream;

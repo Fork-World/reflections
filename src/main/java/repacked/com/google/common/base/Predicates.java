@@ -1,4 +1,4 @@
-package com.google.common.base;
+package repacked.com.google.common.base;
 
 import javax.annotation.Nullable;
 import java.io.Serializable;

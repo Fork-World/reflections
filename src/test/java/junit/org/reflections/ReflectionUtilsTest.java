@@ -1,6 +1,6 @@
 package junit.org.reflections;
 
-import com.google.common.base.Function;
+import repacked.com.google.common.base.Function;
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
 import org.junit.Test;
@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.*;
 
-import static com.google.common.collect.Collections2.transform;
+import static repacked.com.google.common.collect.Collections2.transform;
 import static junit.org.reflections.ReflectionsTest.are;
 import static org.junit.Assert.*;
 import static org.reflections.ReflectionUtils.*;

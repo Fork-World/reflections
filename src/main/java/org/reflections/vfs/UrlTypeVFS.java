@@ -1,6 +1,6 @@
 package org.reflections.vfs;
 
-import com.google.common.base.Predicate;
+import repacked.com.google.common.base.Predicate;
 import org.reflections.Reflections;
 import org.reflections.ReflectionsException;
 import org.reflections.vfs.Vfs.Dir;

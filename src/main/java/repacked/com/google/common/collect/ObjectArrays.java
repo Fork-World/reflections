@@ -1,9 +1,6 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
-
-import java.util.Collection;
-import java.util.Map;
-import java.util.function.Supplier;
+import java.lang.reflect.Array;
 
 /**
  * Copyright (C) 2010 RapidPM
@@ -16,22 +13,25 @@ import java.util.function.Supplier;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * <p>
+ *
  * Created by RapidPM - Team on 18.09.16.
  */
-public class Multimaps {
+public class ObjectArrays {
 
-  private Multimaps() {
+  private ObjectArrays() {
   }
 
-  public static <KEY, VALUES> Multimap<KEY, VALUES> newSetMultimap(final Map<KEY, Collection<VALUES>> map,                                                                   final Supplier<Collection<VALUES>> supplier) {
-    return new MultimapImpl<KEY, VALUES>(map, supplier) {
-    };
+  public static <T> T[] concat(final T[] arrayA, final T[] arrayB, final Class<T> arrayTypeClass) {
+    T[] result = newArray(arrayTypeClass, arrayA.length + arrayB.length);
+    System.arraycopy(arrayA, 0, result, 0, arrayA.length);
+    System.arraycopy(arrayB, 0, result, arrayA.length, arrayB.length);
+    return result;
   }
 
-  public static <KEY, VALUES> Multimap<KEY, VALUES> synchronizedSetMultimap(final Multimap<KEY, VALUES> multimap) {
-    return new SycronizedMultimapProxy<>(multimap);
+  public static <T> T[] newArray(Class<T> type, int length) {
+    return (T[]) Array.newInstance(type, length);
   }
+
 
 
 }

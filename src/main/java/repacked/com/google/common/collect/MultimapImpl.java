@@ -1,4 +1,4 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
 import javax.annotation.Nullable;
 import java.util.*;

@@ -1,11 +1,11 @@
 package org.reflections;
 
-import com.google.common.base.Joiner;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.MultimapImpl;
-import com.google.common.collect.Sets;
+import repacked.com.google.common.base.Joiner;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.collect.Iterables;
+import repacked.com.google.common.collect.Multimap;
+import repacked.com.google.common.collect.MultimapImpl;
+import repacked.com.google.common.collect.Sets;
 import org.reflections.scanners.*;
 import org.reflections.scanners.Scanner;
 import org.reflections.serializers.Serializer;
@@ -35,9 +35,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import static com.google.common.base.Predicates.in;
-import static com.google.common.base.Predicates.not;
-import static com.google.common.collect.Iterables.concat;
+import static repacked.com.google.common.base.Predicates.in;
+import static repacked.com.google.common.base.Predicates.not;
+import static repacked.com.google.common.collect.Iterables.concat;
 import static java.lang.String.format;
 import static org.reflections.ReflectionUtils.*;
 import static org.reflections.util.Utils.*;
@@ -101,7 +101,7 @@ import static org.reflections.util.Utils.*;
  * <p>Use {@link #getStore()} to access and query the store directly
  * <p>In order to save the store metadata, use {@link #save(String)} or {@link #save(String, org.reflections.serializers.Serializer)}
  * for example with {@link org.reflections.serializers.XmlSerializer} or {@link org.reflections.serializers.JavaCodeSerializer}
- * <p>In order to collect pre saved metadata and avoid re-scanning, use {@link #collect(String, com.google.common.base.Predicate<T>, org.reflections.serializers.Serializer...)}}
+ * <p>In order to collect pre saved metadata and avoid re-scanning, use {@link #collect(String, Predicate <T>, org.reflections.serializers.Serializer...)}}
  * <p><i>Make sure to scan all the transitively relevant packages.
  * <br>for instance, given your class C extends B extends A, and both B and A are located in another package than C,
  * when only the package of C is scanned - then querying for sub types of A returns nothing (transitive), but querying for sub types of B returns C (direct).

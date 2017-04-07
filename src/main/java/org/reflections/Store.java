@@ -1,8 +1,8 @@
 package org.reflections;
 
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
+import repacked.com.google.common.collect.Iterables;
+import repacked.com.google.common.collect.Multimap;
+import repacked.com.google.common.collect.Multimaps;
 
 import java.util.*;
 

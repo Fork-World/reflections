@@ -1,6 +1,6 @@
 package org.reflections.scanners;
 
-import com.google.common.base.Joiner;
+import repacked.com.google.common.base.Joiner;
 import javassist.bytecode.LocalVariableAttribute;
 import javassist.bytecode.MethodInfo;
 import org.reflections.adapters.MetadataAdapter;

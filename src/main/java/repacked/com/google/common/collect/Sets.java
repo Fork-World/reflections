@@ -1,7 +1,7 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
-import com.google.common.base.Predicate;
-import com.google.common.base.Predicates;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.base.Predicates;
 
 import java.util.AbstractSet;
 import java.util.Iterator;

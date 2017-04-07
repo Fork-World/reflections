@@ -1,7 +1,9 @@
-package com.google.common.util.concurrent;
+package repacked.com.google.common.collect;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.function.Supplier;
 
 /**
  * Copyright (C) 2010 RapidPM
@@ -17,26 +19,19 @@ import java.util.concurrent.ThreadFactory;
  * <p>
  * Created by RapidPM - Team on 18.09.16.
  */
-public class ThreadFactoryBuilder {
-  private String nameFormat;
-  private boolean deamon;
+public class Multimaps {
 
-  public ThreadFactoryBuilder setDaemon(final boolean deamon) {
-    this.deamon = deamon;
-    return this;
+  private Multimaps() {
   }
 
-  public ThreadFactoryBuilder setNameFormat(final String nameFormat) {
-    this.nameFormat = nameFormat;
-    return this;
+  public static <KEY, VALUES> Multimap<KEY, VALUES> newSetMultimap(final Map<KEY, Collection<VALUES>> map,                                                                   final Supplier<Collection<VALUES>> supplier) {
+    return new MultimapImpl<KEY, VALUES>(map, supplier) {
+    };
+  }
+
+  public static <KEY, VALUES> Multimap<KEY, VALUES> synchronizedSetMultimap(final Multimap<KEY, VALUES> multimap) {
+    return new SycronizedMultimapProxy<>(multimap);
   }
 
 
-  public ThreadFactory build() {
-    //TODO find better ThreadFactory
-    if (deamon) {
-      return Executors.privilegedThreadFactory();
-    }
-    return Executors.defaultThreadFactory();
-  }
 }

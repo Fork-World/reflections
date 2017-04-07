@@ -1,6 +1,4 @@
-package com.google.common.collect;
-
-import java.lang.reflect.Array;
+package repacked.com.google.common.base;
 
 /**
  * Copyright (C) 2010 RapidPM
@@ -16,20 +14,7 @@ import java.lang.reflect.Array;
  *
  * Created by RapidPM - Team on 18.09.16.
  */
-public class ObjectArrays {
+public interface Predicate<T> {
 
-  private ObjectArrays() {
-  }
-
-  public static <T> T[] concat(final T[] arrayA, final T[] arrayB, final Class<T> arrayTypeClass) {
-    T[] result = newArray(arrayTypeClass, arrayA.length + arrayB.length);
-    System.arraycopy(arrayA, 0, result, 0, arrayA.length);
-    System.arraycopy(arrayB, 0, result, arrayA.length, arrayB.length);
-    return result;
-  }
-
-  public static <T> T[] newArray(Class<T> type, int length) {
-    return (T[]) Array.newInstance(type, length);
-  }
-
+  boolean apply(final T fqn);
 }

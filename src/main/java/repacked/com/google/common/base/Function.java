@@ -1,4 +1,4 @@
-package com.google.common.base;
+package repacked.com.google.common.base;
 
 /**
  * Copyright (C) 2010 RapidPM

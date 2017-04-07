@@ -1,7 +1,7 @@
 package org.reflections;
 
-import com.google.common.base.Predicate;
-import com.google.common.base.Predicates;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.base.Predicates;
 import org.reflections.util.ClasspathHelper;
 
 import java.lang.annotation.Annotation;
@@ -21,10 +21,10 @@ import java.util.stream.StreamSupport;
  * <pre> Set&#60?> result = getAllXXX(type/s, withYYY) </pre>
  * <p>where get methods are:
  * <ul>
- * <li>{@link #getAllSuperTypes(Class, com.google.common.base.Predicate<T>...)}
- * <li>{@link #getAllFields(Class, com.google.common.base.Predicate<T>...)}
- * <li>{@link #getAllMethods(Class, com.google.common.base.Predicate<T>...)}
- * <li>{@link #getAllConstructors(Class, com.google.common.base.Predicate<T>...)}
+ * <li>{@link #getAllSuperTypes(Class, Predicate <T>...)}
+ * <li>{@link #getAllFields(Class, Predicate <T>...)}
+ * <li>{@link #getAllMethods(Class, Predicate <T>...)}
+ * <li>{@link #getAllConstructors(Class, Predicate <T>...)}
  * </ul>
  * <p>and predicates included here all starts with "with", such as
  * <ul>
@@ -54,7 +54,7 @@ import java.util.stream.StreamSupport;
 public abstract class ReflectionUtils {
 
   /**
-   * would include {@code Object.class} when {getAllSuperTypes(Class, com.google.common.base.Predicate<T>[])}. default is false.
+   * would include {@code Object.class} when {getAllSuperTypes(Class, Predicate<T>[])}. default is false.
    */
   public static boolean includeObject = false;
   //

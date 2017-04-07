@@ -1,6 +1,6 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
-import com.google.common.base.Function;
+import repacked.com.google.common.base.Function;
 
 import javax.annotation.Nullable;
 import java.util.AbstractCollection;

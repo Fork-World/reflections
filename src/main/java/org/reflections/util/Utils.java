@@ -1,6 +1,6 @@
 package org.reflections.util;
 
-import com.google.common.base.Joiner;
+import repacked.com.google.common.base.Joiner;
 import org.reflections.Reflections;
 import org.reflections.ReflectionsException;
 import org.slf4j.Logger;

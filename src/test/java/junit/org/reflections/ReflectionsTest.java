@@ -1,8 +1,7 @@
 package junit.org.reflections;
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.collect.Iterables;
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -16,7 +15,6 @@ import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 import org.reflections.util.FilterBuilder;
 
-import javax.annotation.Nullable;
 import java.io.File;
 import java.lang.annotation.Annotation;
 import java.util.*;

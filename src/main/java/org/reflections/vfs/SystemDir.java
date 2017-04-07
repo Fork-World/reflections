@@ -1,6 +1,6 @@
 package org.reflections.vfs;
 
-import com.google.common.collect.AbstractIterator;
+import repacked.com.google.common.collect.AbstractIterator;
 
 import java.io.File;
 import java.util.*;

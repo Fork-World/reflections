@@ -1,6 +1,6 @@
 package org.reflections;
 
-import com.google.common.base.Predicate;
+import repacked.com.google.common.base.Predicate;
 import org.reflections.adapters.MetadataAdapter;
 import org.reflections.scanners.Scanner;
 import org.reflections.serializers.Serializer;

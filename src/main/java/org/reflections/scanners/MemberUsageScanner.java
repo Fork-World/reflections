@@ -1,6 +1,6 @@
 package org.reflections.scanners;
 
-import com.google.common.base.Joiner;
+import repacked.com.google.common.base.Joiner;
 import javassist.*;
 import javassist.bytecode.MethodInfo;
 import javassist.expr.*;

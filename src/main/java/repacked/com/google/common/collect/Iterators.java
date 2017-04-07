@@ -1,13 +1,12 @@
-package com.google.common.collect;
+package repacked.com.google.common.collect;
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
+import repacked.com.google.common.base.Function;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.base.Predicates;
 
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
-import static com.google.common.base.Predicates.equalTo;
 
 /**
  * Copyright (C) 2010 RapidPM
@@ -125,7 +124,7 @@ public class Iterators {
   }
 
   public static boolean contains(final Iterator<?> iterator, final Object element) {
-    return any(iterator, equalTo(element));
+    return any(iterator, Predicates.equalTo(element));
   }
 
   public static <T> Iterator<T> limit(final Iterator<T> iterator, final int limitSize) {

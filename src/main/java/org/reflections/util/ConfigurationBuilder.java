@@ -1,8 +1,8 @@
 package org.reflections.util;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.ObjectArrays;
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.collect.ObjectArrays;
+import repacked.com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.reflections.Configuration;
 import org.reflections.Reflections;
 import org.reflections.ReflectionsException;
@@ -165,7 +165,7 @@ public class ConfigurationBuilder implements Configuration {
 
   /**
    * sets the input filter for all resources to be scanned.
-   * <p> supply a {@link com.google.common.base.Predicate} or use the {@link FilterBuilder}
+   * <p> supply a {@link Predicate} or use the {@link FilterBuilder}
    */
   public ConfigurationBuilder filterInputsBy(Predicate<String> inputsFilter) {
     this.inputsFilter = inputsFilter;
@@ -245,7 +245,7 @@ public class ConfigurationBuilder implements Configuration {
 
   /**
    * sets the input filter for all resources to be scanned.
-   * <p> supply a {@link com.google.common.base.Predicate} or use the {@link FilterBuilder}
+   * <p> supply a {@link Predicate} or use the {@link FilterBuilder}
    */
   public void setInputsFilter(@Nullable Predicate<String> inputsFilter) {
     this.inputsFilter = inputsFilter;

@@ -1,7 +1,7 @@
 package org.reflections.vfs;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.collect.Iterables;
 import org.reflections.Reflections;
 import org.reflections.ReflectionsException;
 import org.reflections.util.ClasspathHelper;
@@ -46,7 +46,7 @@ import java.util.jar.JarFile;
  *
  *      Vfs.Dir dir = Vfs.fromURL(new URL("http://mirrors.ibiblio.org/pub/mirrors/maven2/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar"));
  * </pre>
- * <p>use {@link org.reflections.vfs.Vfs#findFiles(java.util.Collection, com.google.common.base.Predicate<T>)} to get an
+ * <p>use {@link org.reflections.vfs.Vfs#findFiles(java.util.Collection, Predicate <T>)} to get an
  * iteration of files matching given name predicate over given list of urls
  */
 public abstract class Vfs {

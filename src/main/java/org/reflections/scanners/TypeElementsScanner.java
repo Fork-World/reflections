@@ -1,6 +1,6 @@
 package org.reflections.scanners;
 
-import com.google.common.base.Joiner;
+import repacked.com.google.common.base.Joiner;
 
 /**
  * scans fields and methods and stores fqn as key and elements as values

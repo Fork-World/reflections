@@ -1,7 +1,7 @@
 package org.reflections.util;
 
-import com.google.common.base.Joiner;
-import com.google.common.base.Predicate;
+import repacked.com.google.common.base.Joiner;
+import repacked.com.google.common.base.Predicate;
 import org.reflections.ReflectionsException;
 
 import java.util.*;

@@ -1,6 +1,6 @@
 package org.reflections.vfs;
 
-import com.google.common.collect.AbstractIterator;
+import repacked.com.google.common.collect.AbstractIterator;
 import org.reflections.ReflectionsException;
 import org.reflections.util.Utils;
 

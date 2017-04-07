@@ -1,7 +1,7 @@
 package org.reflections.scanners;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Multimap;
+import repacked.com.google.common.base.Predicate;
+import repacked.com.google.common.collect.Multimap;
 import org.reflections.Configuration;
 import org.reflections.vfs.Vfs;
 
